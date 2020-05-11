@@ -8,12 +8,12 @@ To use the PMT, all that is needs to is to insert the tag in the patient environ
 
 There are two distinct types of tags availble, 
 
-* [link](#campaign-tag)Campaign Tags  
+* [Campaign Tag](#campaign-tag)  
 
-* [link](#inventory-tag)Inventory Tags
+* [Inventory Tag](#inventory-tag)
 
 
-### Campaign Tag {: #campaign-tag }
+### Campaign Tag
 
 A campaign tag is specific to a campaign. They are used when the partner is able to preselect and target sessions for a given campaign based on contextual relevance of the session.  A campaign typically consists of edutional content plus some sponsorship content.
 
@@ -48,7 +48,7 @@ Where,
 	* 4:3 
 
 
-### Inventory Tag {: #inventory-tag }
+### Inventory Tag
 
 An inventory tag is used by partner to call out an opportunity to engage with a user by passing contextual information like keywords or ICD codes associated with the session.  This allows Populus to select the best possible content for the opportunity.
 
