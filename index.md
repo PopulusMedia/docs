@@ -1,20 +1,38 @@
 ---
-title: Populus Media - Partner Integration Guide
 layout: default
+title: Populus Media - Partner Integration Guide
 ---
 
-## About
+# About
 
 Popcorn is a JavaScript library that Populus Media uses to control delivery of the right content in a virtual waiting room environment.  
 
 ## Integration Methods
 
 
+### Campaign Specific Tags
+
+
+<code>
+    <pre class="pop-suppress">This is an ad </pre>
+    <ins class="popcorn" 
+		  data-pop-type="11"
+		  data-pop-width="640px"
+      data-pop-partner="test"
+      data-pop-visit-id="1234-5678-9abc-def0"
+      data-pop-campaign="ajovy"
+      data-pop-debug="1"
+      >
+      <script src="index.js" async></script>    
+	  </ins>
+</code>
 
 
 
 
-Populus Media Tags is the most direct way to use the library.  This is how a typical populus media tag looks like
+### Inventory Tags
+
+Populus Media Tags (PMT) is the most direct way to use the library.  This is how a typical populus media tag looks like
 
 
 1> Campaign Tags
