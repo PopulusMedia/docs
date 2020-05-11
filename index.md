@@ -1,9 +1,12 @@
----
-layout: default
-title: Populus Media - Partner Integration Guide
----
+
 
 ## Integration Method for Web Applications
+
+Platforms Supported
+
+
+
+
 
 
 ### Campaign Specific Tags
