@@ -1,5 +1,5 @@
 ---
-title: Populus Media Virtual Waiting Room Solution
+title: Populus Media - Partner Integration Guide
 layout: default
 ---
 
@@ -7,10 +7,14 @@ layout: default
 
 Popcorn is a JavaScript library that Populus Media uses to control delivery of the right content in a virtual waiting room environment.  
 
-## Usage
+## Integration Methods
+
+
+
+
+
 
 Populus Media Tags is the most direct way to use the library.  This is how a typical populus media tag looks like
-
 
 
 1> Campaign Tags
