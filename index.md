@@ -3,31 +3,26 @@ layout: default
 title: Populus Media - Partner Integration Guide
 ---
 
-# About
-
-Popcorn is a JavaScript library that Populus Media uses to control delivery of the right content in a virtual waiting room environment.  
-
-## Integration Methods
+## Integration Method for Web Applications
 
 
 ### Campaign Specific Tags
 
+Campaign Tags are typically specific to a campaign. They are used when the partner is able to selectively target sessions based on diagnostic data of the user 
 
-<code>
-    <pre class="pop-suppress">This is an ad </pre>
-    <ins class="popcorn" 
-		  data-pop-type="11"
-		  data-pop-width="640px"
-      data-pop-partner="test"
+
+
+~~~~~
+	<ins class="popcorn" 
+	  data-pop-type="11"
+	  data-pop-width="640px"
+      data-pop-height="360px"
+      data-pop-partner="<partner-code"
       data-pop-visit-id="1234-5678-9abc-def0"
-      data-pop-campaign="ajovy"
-      data-pop-debug="1"
-      >
-      <script src="index.js" async></script>    
-	  </ins>
-</code>
-
-
+      data-pop-campaign="test">
+        <script src="https://cdn.populus-media.net/popcorn/v1.js" async></script>    
+	</ins>
+~~~~~
 
 
 ### Inventory Tags
@@ -36,8 +31,6 @@ Populus Media Tags (PMT) is the most direct way to use the library.  This is how
 
 
 1> Campaign Tags
-
-Campaign Tags are typicall 
 
 
 
