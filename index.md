@@ -1,70 +1,53 @@
-
+# Populus Media - Media Integration Guide
 
 ## Integration Method for Web Applications
 
-Platforms Supported
+Partners that are web-application based can integrate via Populus Media Tag (PMT).  A Populus Media Tag is an HTML <ins> tag with a bunch of data-attributes used for either configuring the user epxerience or for passing any other data from the partner to Populus Media.
+
+All the partner application needs to is to insert the tag in the patient environment like the waiting room or a async chat window or possibly at other locations during the user journey. 
+
+There are two types of tags availble, 
+
+* Campaign Tags  
+
+* Inventory Tags (Beta)
 
 
-
-
-
-
-### Campaign Specific Tags
+### Campaign Tags
 
 Campaign Tags are typically specific to a campaign. They are used when the partner is able to selectively target sessions based on diagnostic data of the user 
 
-
+Here's an sample tag
 
 ~~~~~
 	<ins class="popcorn" 
-	  data-pop-type="11"
-	  data-pop-width="640px"
-      data-pop-height="360px"
-      data-pop-partner="<partner-code"
-      data-pop-visit-id="1234-5678-9abc-def0"
-      data-pop-campaign="test">
-        <script src="https://cdn.populus-media.net/popcorn/v1.js" async></script>    
+	  	data-pop-width="640px"
+	  	data-pop-height="360px"
+		data-pop-partner="<partner-code>"
+		data-pop-visit-id="1234-5678-9abc-def0"
+		data-pop-campaign="test">
+        	<script src="https://cdn.populus-media.net/popcorn/v1.js" async></script>    
 	</ins>
 ~~~~~
+
+Where,
+
+* data-pop-partner is the partner-code (provided by Populus Media)
+* data-pop-visit-id is a anonymous session ID associated with the visit, this can be used to tie back partner data with Populus Media data
+* data-pop-campaign is the name of the campaign (provided by Populus Media)
+* data-pop-width is the width in either pixels or as a percentage, examples below
+	* "90%" - set the width to 90% of the containing element width
+	* "640px" - set the width to a fixed value of 640 pixels
+	* "auto" - auto-compute width based given height and aspect ratio
+* data-pop-height is the height in either pixels or as a percentage, examples below
+	* "100%" - set the height to 100% of the containing element width
+	* "360px" - set the height to a fixed value of 360 pixels
+	* "auto" - auto-compute height based given width and aspect ratio
+* data-pop-aspect-ratio is the user defined aspect ratio, some values are
+	* 16:9 (default)
+	* 4:3 
 
 
 ### Inventory Tags
 
-Populus Media Tags (PMT) is the most direct way to use the library.  This is how a typical populus media tag looks like
-
-
-1> Campaign Tags
-
-
-
-2> Inventory Tags
-
-
-### Config : <code>object</code>
-**Kind**: global namespace  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| AD_ID | <code>string</code> | Element Id of the container in which video ad should play |
-| VIDEO_ID | <code>string</code> | Element Id of the <video> element that would play backup media |
-| FULLSCREEN | <code>boolean</code> | Indicates if the Ad Pod should cover the whole viewport |
-| [PADDING] | <code>number</code> | Padding (in pixels) on each side when the Ad Pod when in fullscreen, default to zero |
-| [WIDTH] | <code>number</code> | Width of the Ad Pod (in pixels), used when FULLSCREEN is false, defaults to 640 |
-| [HEIGHT] | <code>number</code> | Height of the Ad Pod (in pixels), used when FULLSCREEN is false, defaults to 480 |
-| MIN_DURATION | <code>number</code> | Minumum duration the Ad Pod runs.  The Ad Pod would stay live for atleast the minimum duration regardless of if ads are available or not, playing backup media instead |
-| MAX_DURATION | <code>number</code> | Maximum duration the Ad Pod runs - upon reaching this duration, the Ad Pod considers itself complete and invokes the callback function specified with CALLBACKFN |
-| MAX_ADS | <code>number</code> | Maximum number of Ads to show, the Ad Pod would consider itself complete when if it has played MAX_ADS eve if it has not reached the MAX_DURATION |
-| [DEBUG] | <code>boolean</code> | Indicates if severe messages should be shown on screen, default to false |
-| BACKUP_MEDIA | <code>array</code> | An array containing a list of paths to local media files to be played when no ad is available to be played |
-| CALLBACKFN | <code>function</code> | A callback function called by the Ad Pod upon completion, make change here to notify your player |
-
-
-### Installation 
-
-Install by moving the customized HTML file and related assets (like JavaScript) to a suitable location on the player from where it could be triggered by the CMS on the video player
-
-### Scheduling
-
-The Ad Pod HTML content is meant to be scheduled just like any other static or dynamic HTML on existing Content Management Systems (CMS).  A key element of scheduling is to understanding how to obtain control back iahead of the scheduled end time of the Ad Pod.   Control can be passed from the Ad Pod back to the main video player by writing custom code in JavaScript in the property called CALLBACKFN and it generally varies by the CMS used.
-
+Inventory Tags are more generic 
