@@ -1,4 +1,7 @@
-# Popcorn Library
+---
+title: Populus Media Virtual Waiting Room Solution
+layout: default
+---
 
 ## About
 
