@@ -88,3 +88,6 @@ Where,
 * data-pop-aspect-ratio is the user defined aspect ratio, some values are
 	* 16:9 (default)
 	* 4:3 
+
+---
+&copy; 2020 by Populus Media, Inc
