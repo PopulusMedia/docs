@@ -25,6 +25,7 @@ A campaign tag is specific to a campaign. They are used when the partner is able
 	  	data-pop-height="360px"
 		data-pop-partner="<partner-code>"
 		data-pop-visit-id="1234-5678-9abc-def0"
+		data-pop-anon-id="u9875643210"
 		data-pop-campaign="test">
         	<script src="https://cdn.populus-media.net/popcorn/v1.js" async></script>    
 	</ins>
@@ -34,6 +35,7 @@ Where,
 
 * data-pop-partner is the partner-code (provided by Populus Media)
 * data-pop-visit-id is an anonymous session identifier associated with the visit used to tie back partner data with Populus data
+* data-anon-id is an uniquely identifiable anonymous user id on the partner network, must not be an email address or a user given name (required for campaigns that need opt-outs)
 * data-pop-campaign is the name of the campaign (provided by Populus Media)
 * data-pop-width is the width in either pixels or as a percentage, examples below
 	* "90%" - set the width to 90% of the containing element width
@@ -61,6 +63,7 @@ An inventory tag is used by partner to call out an opportunity to engage with a 
 	  	data-pop-height="360px"
 		data-pop-partner="<partner-code>"
 		data-pop-visit-id="1234-5678-9abc-def0"
+		data-pop-anon-id="u9875643210"
 		data-pop-inventory-class="video"
 		data-pop-keywords="asthma">
         	<script src="https://cdn.populus-media.net/popcorn/v1.js" async></script>    
@@ -71,6 +74,7 @@ Where,
 
 * data-pop-partner is the partner-code (provided by Populus Media)
 * data-pop-visit-id is an anonymous session identifier associated with the visit used to tie back partner data with Populus data
+* data-anon-id is an uniquely identifiable anonymous user id on the partner network, must not be an email address or a user given name
 * data-pop-inventory-class is class of inventory, possible values are
 	* video - video engagement is possible
 	* display - display banners are possible
