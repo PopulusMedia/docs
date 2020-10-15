@@ -6,7 +6,7 @@ Partner that have a web-application based platform can integrate via a Populus M
 
 To use the PMT, all that is needs to is to insert the tag in the patient environment like the waiting room or a async chat window or possibly at other locations during the user journey.  
 
-There are two distinct types of tags availble, 
+There are two distinct types of tags available, 
 
 * [Campaign Tag](#campaign-tag)  
 
@@ -92,3 +92,6 @@ Where,
 * data-pop-aspect-ratio is the user defined aspect ratio, some values are
 	* 16:9 (default)
 	* 4:3 
+
+---
+&copy; 2020 by Populus Media, Inc
