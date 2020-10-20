@@ -29,6 +29,7 @@ github_username:  PopulusMedia
 
 # Build settings
 theme: minima
+destination: ./docs
 #plugins:
 #  - jekyll-feed
 

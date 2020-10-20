@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Populus Media - Integration Guide | Populus Media - Integration Guide for Telehealth Media Partners</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Populus Media - Integration Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
+<meta property="og:description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="Populus Media - Integration Guide" />
+<script type="application/ld+json">
+{"headline":"Populus Media - Integration Guide","description":"Populus Media - Integration Guide for Telehealth Media Partners","@type":"WebSite","url":"/","name":"Populus Media - Integration Guide","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Populus Media - Integration Guide" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Populus Media - Integration Guide</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/javascript/">JavaScript</a><a class="page-link" href="/html/">HTML</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="populus-media-libary-version-3">Populus Media Libary Version 3</h1>
+
+<h2 id="integrating-web-applications">Integrating Web Applications</h2>
+
+<p>Partner that have a web-application based platform can integrate via either HTML tag or a JavaScript based API. Data can be passed to the HTML tag through standard data attributes and the JavaScript API through a JSON object.  A call needs to be made out for every opportunity tthat exists on the partner’s app by either through one of the methods described here.</p>
+
+<p>To see how attributes can be passed, please check out the sections on <a href="/javascript.html">HTML</a> and <a href="/javascript.html">JavaScript</a> for examples.  The following set of attributes can be passed</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>partner</td>
+      <td>An alphanumeric code assigned to the partner</td>
+      <td>Yes</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>visit-id</td>
+      <td>A unique session identifier associated with the visit used to tie back partner data with Populus data</td>
+      <td>Yes</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>anon-id</td>
+      <td>An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>suppress-id</td>
+      <td>A comma separate list of HTML element id’s that must be hidden in case there’s no content to show for the opportunity.  This is useful for hiding companian notices.</td>
+      <td>No</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>Maximum available width as a percentage (%) of the containing element or as an absolute value in pixels (px).</td>
+      <td>No</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>Maximum available height as a percentage (%) of the containing element or as an absolute value in pixels (px).</td>
+      <td>No</td>
+      <td>auto</td>
+    </tr>
+    <tr>
+      <td>aspect-ratio</td>
+      <td>Aspect ratio of the video player when a video is played on the parter site like <strong><em>4:3</em></strong> or <strong><em>16:9</em></strong></td>
+      <td>No</td>
+      <td>16:9</td>
+    </tr>
+    <tr>
+      <td>inventory-class</td>
+      <td>A value indicating what kind of content are acceptable for the opportunity. Possible values are <strong><em>video</em></strong>, <strong><em>display</em></strong> or <strong><em>any</em></strong></td>
+      <td>No</td>
+      <td>any</td>
+    </tr>
+    <tr>
+      <td>reason</td>
+      <td>A user entered reason for the visit, this would be used to determine the best possible content for the opportunity</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>keywords</td>
+      <td>A list of comma separate keywords for the session to be used to determine the best content for the opportunity. When passed, this attribute takes priority over the attribute <em>reason</em></td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>icdx</td>
+      <td>An ICD10 code associated with the session. When passed, this takes priority over attributes <em>keywords</em> and <em>reason</em></td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>campaign</td>
+      <td>A campaign code associated with the content to be shown. When passed, would be used to select content for the session even if other attributes like <em>reason</em>, <em>keywords</em> or <em>icdx</em> are passed.</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For Populus Media to be able to show content one of the four attributes, <strong><em>reason</em></strong>, <strong><em>keywords</em></strong>, <strong><em>icdx</em></strong> or <strong><em>campaign</em></strong> must be passed</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Populus Media - Integration Guide</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Populus Media - Integration Guide</li><li><a class="u-email" href="mailto:info@populus-media.com">info@populus-media.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/PopulusMedia"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">PopulusMedia</span></a></li><li><a href="https://www.twitter.com/IncPopulus"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">IncPopulus</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Populus Media - Integration Guide for Telehealth Media Partners  </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
