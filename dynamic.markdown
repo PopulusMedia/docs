@@ -1,7 +1,7 @@
 ---
 layout: page
 title: JavaScript
-permalink: javascript
+permalink: /javascript
 ---
 
 Integrationg through a JavaScript API is a two-step process
@@ -51,5 +51,5 @@ Where,
 * height is the maximum height external content from Populus Media 
 * icdx is the ICD10 code associated with the session / visit
 
-For a complete list of attributes that could be passed, please refer the [home page](/index.html).
+For a complete list of attributes that could be passed, please refer the [home page](index.html).
 
