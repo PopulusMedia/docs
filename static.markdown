@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HTML
-permalink: /html/
+permalink: html
 ---
 
 Integrating through HTML is fairly straightforward.   A standard HTML &lt;ins&gt; tag can be placed inline where the partner wishes to show content provided by Populus Media.  Attributes must be passed as data attributes with the prefix "data-pop-".   

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: JavaScript
-permalink: /javascript/
+permalink: javascript
 ---
 
 Integrationg through a JavaScript API is a two-step process
