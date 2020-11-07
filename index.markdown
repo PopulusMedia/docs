@@ -11,7 +11,7 @@ layout: default
 
 Partner that have a web-application based platform can integrate via either HTML tag or a JavaScript based API. Data can be passed to the HTML tag through standard data attributes and the JavaScript API through a JSON object.  A call needs to be made out for every opportunity tthat exists on the partner's app by either through one of the methods described here.  
 
-To see how attributes can be passed, please check out the sections on [HTML](/javascript.html) and [JavaScript](/javascript.html) for examples.  The following set of attributes can be passed 
+To see how attributes can be passed, please check out the sections on [HTML](html) and [JavaScript](javascript) for examples.  The following set of attributes can be passed 
 
 | Attribute Name | Description | Required | Default |
 | ----- | -------- |----- | ----- |
