@@ -11,7 +11,7 @@ Integrationg through a JavaScript API is a two-step process
 The JavaScript library must be loaded with the request variable of ***mode=api***.
 
 ~~~~~
-<script src="https://cdn.populus-media.net/popcorn/v3/index.js?mode=api" defer>
+<script src="https://cdn.populus-media.net/popcorn/v3/index.js?mode=api">
 </script>    
 ~~~~~
 

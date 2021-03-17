@@ -1,0 +1,52 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="index.js?mode=api">
+  </script>   
+  <style>
+    body {
+      padding-top: 80px;
+    }
+  </style>
+  <script>
+    // Generate Random User ID
+    let adStack = []
+
+    window.onload = function() {
+      showAds()
+    }
+
+    function showAds(hash) {
+      let external = $pop.render(document.getElementById('ad-container'), {
+        "partner": "test",
+        "visit-id": "1234-5678-9abc-def0",
+        "keywords": "ibs-d",
+        "icdx": "G20"
+      })
+
+      adStack.push(external)
+    }
+    
+    function hideAds() {
+      adStack.forEach(e => e.clear())
+      adStack = []
+    }
+
+  </script>
+</head>
+<body>
+    <!-- leave this comment in -->
+    <div class="container"> 
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand h1" href="?">Populus Media Sandbox</a>
+      </nav>
+
+      <div id="ad-container">
+      </div>
+
+  </div>   
+</body>
+</html>
