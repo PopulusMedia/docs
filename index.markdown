@@ -27,6 +27,5 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
 | keywords | A list of comma separate keywords for the session to be used to determine the best content for the opportunity. When passed, this attribute takes priority over the attribute _reason_ | No | |
 | icdx | An ICD10 code associated with the session. When passed, this takes priority over attributes _keywords_ and _reason_ | No | |
-| campaign | A campaign code associated with the content to be shown. When passed, would be used to select content for the session even if other attributes like _reason_, _keywords_ or _icdx_ are passed. | No | | 
 
-For Populus Media to be able to show content one of the four attributes, ___reason___, ___keywords___, ___icdx___ or ___campaign___ must be passed
+For Populus Media to be able to show content one of the three attributes, ___reason___, ___keywords___ or ___icdx___ must be passed
