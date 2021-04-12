@@ -18,7 +18,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | partner | An alphanumeric code assigned to the partner | Yes | |
 | visit-id | A unique session identifier associated with the visit used to tie back partner data with Populus data | Yes | |
 | anon-id | An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs | No 
-| suppress-id | A comma separate list of HTML element id's that must be hidden in case there's no content to show for the opportunity.  This is useful for hiding companian notices. | No | none |
+| suppress | A comma separate list of HTML element id's that must be hidden in case there's no content to show for the opportunity.  This is useful for hiding companian notices. | No | none |
 | width | Maximum available width as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | 100% |
 | height | Maximum available height as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | auto |
 | aspect-ratio | Aspect ratio of the video player when a video is played on the parter site like ***4:3*** or ***16:9*** | No | 16:9 | 
