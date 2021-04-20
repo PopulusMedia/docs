@@ -4,7 +4,7 @@ title: JavaScript
 permalink: /javascript
 ---
 
-Integrationg through a JavaScript API is a two-step process
+Integrationg through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.
 
 ### Step 1 - Including the JavaScript Library in your Web App or Page
 
@@ -30,7 +30,7 @@ Example:
 </div>
 ~~~~~
 
-Call the render() method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.
+Call the _render()_ method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.
 
 ~~~~~
 let external = $pop.render(document.getElementById('custom-content'), {
@@ -53,3 +53,25 @@ Where,
 
 For a complete list of attributes that could be passed, please refer the [home page](index.html).
 
+
+### Step 3 - Obtaining rendering status _(beta)_
+
+Call to the _render()_ method on the API returns an object which can provide useful information about the the work that library is doing.  A _null_ response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called _noAds_ which is fired when the render() method could not show an ad.  Here's an illustration of the correct way to use output from the library
+
+Illustration:
+
+~~~~~
+let external = $pop.render(...)
+
+// If render returns an object, add an event listener
+if (external) {
+  external.addEventListener('noAds', () => {
+    // No ad could be shown - late / async stage
+    ...
+  })
+}
+else {
+  // No ad could be shown - early / sync stage
+  ...
+}
+~~~~~

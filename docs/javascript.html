@@ -13,7 +13,7 @@
 <meta property="og:url" content="/docs/javascript" />
 <meta property="og:site_name" content="Populus Media - Integration Guide" />
 <script type="application/ld+json">
-{"headline":"JavaScript","description":"Populus Media - Integration Guide for Telehealth Media Partners","@type":"WebPage","url":"/docs/javascript","@context":"https://schema.org"}</script>
+{"description":"Populus Media - Integration Guide for Telehealth Media Partners","@type":"WebPage","headline":"JavaScript","url":"/docs/javascript","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/docs/feed.xml" title="Populus Media - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
@@ -40,7 +40,7 @@
   </header>
 
   <div class="post-content">
-    <p>Integrationg through a JavaScript API is a two-step process</p>
+    <p>Integrationg through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.</p>
 
 <h3 id="step-1---including-the-javascript-library-in-your-web-app-or-page">Step 1 - Including the JavaScript Library in your Web App or Page</h3>
 
@@ -63,7 +63,7 @@
 &lt;/div&gt;
 </code></pre></div></div>
 
-<p>Call the render() method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.</p>
+<p>Call the <em>render()</em> method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let external = $pop.render(document.getElementById('custom-content'), {
 	"partner": "test",
@@ -86,6 +86,26 @@
 
 <p>For a complete list of attributes that could be passed, please refer the <a href="index.html">home page</a>.</p>
 
+<h3 id="step-3---obtaining-rendering-status-beta">Step 3 - Obtaining rendering status <em>(beta)</em></h3>
+
+<p>Call to the <em>render()</em> method on the API returns an object which can provide useful information about the the work that library is doing.  A <em>null</em> response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called <em>noAds</em> which is fired when the render() method could not show an ad.  Here’s an illustration of the correct way to use output from the library</p>
+
+<p>Illustration:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let external = $pop.render(...)
+
+// If render returns an object, add an event listener
+if (external) {
+  external.addEventListener('noAds', () =&gt; {
+    // No ad could be shown - late / async stage
+    ...
+  })
+}
+else {
+  // No ad could be shown - early / sync stage
+  ...
+}
+</code></pre></div></div>
 
   </div>
 
