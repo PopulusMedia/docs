@@ -16,7 +16,7 @@ Integrating through HTML is fairly straightforward.   A standard HTML &lt;ins&gt
 	data-pop-width="640px"
   	data-pop-height="360px"
 	data-pop-icdx="G40">
-  <script src="https://cdn.populus-media.net/popcorn/v3/index.js" async></script>    
+  <script src="https://cdn.populus-media.net/popcorn/v4/index.js" async></script>    
 </ins>
 ~~~~~
 

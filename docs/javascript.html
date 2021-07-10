@@ -46,7 +46,7 @@
 
 <p>The JavaScript library must be loaded with the request variable of <strong><em>mode=api</em></strong>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="https://cdn.populus-media.net/popcorn/v3/index.js?mode=api"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="https://cdn.populus-media.net/popcorn/v4/index.js?mode=api"&gt;
 &lt;/script&gt;    
 </code></pre></div></div>
 
@@ -86,7 +86,7 @@
 
 <p>For a complete list of attributes that could be passed, please refer the <a href="index.html">home page</a>.</p>
 
-<h3 id="step-3---obtaining-rendering-status-beta">Step 3 - Obtaining rendering status <em>(beta)</em></h3>
+<h3 id="step-3---obtaining-rendering-status">Step 3 - Obtaining rendering status</h3>
 
 <p>Call to the <em>render()</em> method on the API returns an object which can provide useful information about the the work that library is doing.  A <em>null</em> response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called <em>noAds</em> which is fired when the render() method could not show an ad.  Here’s an illustration of the correct way to use output from the library</p>
 
@@ -97,15 +97,37 @@
 // If render returns an object, add an event listener
 if (external) {
   external.addEventListener('noAds', () =&gt; {
-    // No ad could be shown - late / async stage
+    // No ad could be shown - late stage - during rendering
     ...
   })
 }
 else {
-  // No ad could be shown - early / sync stage
+  // No ad could be shown - early stage - during initialization
   ...
 }
 </code></pre></div></div>
+
+<h4 id="list-of-other-events-fired-v4-only">List of other events fired (v4 only)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>done</td>
+      <td>When a video ad has finished running</td>
+    </tr>
+    <tr>
+      <td>error</td>
+      <td>An error occurred while rendering a video ad</td>
+    </tr>
+  </tbody>
+</table>
+
 
   </div>
 

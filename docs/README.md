@@ -8,3 +8,4 @@ Building the project
 --------------------
 
 bundle exec jekyll build
+

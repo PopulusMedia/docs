@@ -11,7 +11,7 @@ Integrationg through a JavaScript API is a two-step process.  An optional third 
 The JavaScript library must be loaded with the request variable of ***mode=api***.
 
 ~~~~~
-<script src="https://cdn.populus-media.net/popcorn/v3/index.js?mode=api">
+<script src="https://cdn.populus-media.net/popcorn/v4/index.js?mode=api">
 </script>    
 ~~~~~
 
@@ -54,7 +54,7 @@ Where,
 For a complete list of attributes that could be passed, please refer the [home page](index.html).
 
 
-### Step 3 - Obtaining rendering status _(beta)_
+### Step 3 - Obtaining rendering status 
 
 Call to the _render()_ method on the API returns an object which can provide useful information about the the work that library is doing.  A _null_ response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called _noAds_ which is fired when the render() method could not show an ad.  Here's an illustration of the correct way to use output from the library
 
@@ -66,12 +66,23 @@ let external = $pop.render(...)
 // If render returns an object, add an event listener
 if (external) {
   external.addEventListener('noAds', () => {
-    // No ad could be shown - late / async stage
+    // No ad could be shown - late stage - during rendering
     ...
   })
 }
 else {
-  // No ad could be shown - early / sync stage
+  // No ad could be shown - early stage - during initialization
   ...
 }
 ~~~~~
+
+
+#### List of other events fired (v4 only)
+
+| Event Name | Description |
+|------------|-------------|
+| done       | When a video ad has finished running |
+| error      | An error occurred while rendering a video ad |
+
+
+
