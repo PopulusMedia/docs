@@ -83,6 +83,4 @@ else {
 |------------|-------------|
 | done       | When a video ad has finished running |
 | error      | An error occurred while rendering a video ad |
-
-
-
+| viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
