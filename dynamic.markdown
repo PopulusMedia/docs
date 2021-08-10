@@ -36,8 +36,8 @@ Call the _render()_ method on the API.  The render method takes the parent conta
 let external = $pop.render(document.getElementById('custom-content'), {
 	"partner": "test",
 	"visit-id": "1234-5678-9abc-def0",
-	"width": "640px"
-	"height":"360px"
+	"width": "640px",
+	"height":"360px",
 	"icdx": "G20"
 })
 ~~~~~
