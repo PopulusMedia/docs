@@ -84,3 +84,6 @@ else {
 | done       | When a video ad has finished playing |
 | error      | An error occurred while plyaing a video ad |
 | viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
+| init | A campaign has been selected; this does not eliminate the possibility of an *noAds* event from firing later in the lifecycle|
+
+
