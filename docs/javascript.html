@@ -65,7 +65,7 @@
 
 <p>Call the <em>render()</em> method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let external = $pop.render(document.getElementById('custom-content'), {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let adObject = $pop.render(document.getElementById('custom-content'), {
 	"partner": "test",
 	"visit-id": "1234-5678-9abc-def0",
 	"width": "640px",
@@ -79,8 +79,8 @@
 <ul>
   <li>partner is the partner-code (provided by Populus Media)</li>
   <li>visit-id is the visit-id associcated witht he visit</li>
-  <li>width is the maximum width of external content from Populus Media</li>
-  <li>height is the maximum height external content from Populus Media</li>
+  <li>width is the maximum width of content provided by the library</li>
+  <li>height is the maximum height of content provided by the library</li>
   <li>icdx is the ICD10 code associated with the session / visit</li>
 </ul>
 
@@ -88,15 +88,15 @@
 
 <h3 id="step-3---obtaining-rendering-status">Step 3 - Obtaining rendering status</h3>
 
-<p>Call to the <em>render()</em> method on the API returns an object which can provide useful information about the the work that library is doing.  A <em>null</em> response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called <em>noAds</em> which is fired when the render() method could not show an ad.  Here’s an illustration of the correct way to use output from the library</p>
+<p>Call to the <em>render()</em> method on the API returns an object, called the <strong><em>ad-object</em></strong>, which can provide useful information about the the work that library is doing.  A <em>null</em> response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called <em>noAds</em> which is fired when the render() method could not show an ad.  Here’s an illustration of the correct way to use output from the library</p>
 
 <p>Illustration:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let external = $pop.render(...)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
-if (external) {
-  external.addEventListener('noAds', () =&gt; {
+if (adObject ) {
+  adObject .addEventListener('noAds', () =&gt; {
     // No ad could be shown - late stage - during rendering
     ...
   })
@@ -107,7 +107,9 @@ else {
 }
 </code></pre></div></div>
 
-<h4 id="list-of-other-events-fired-v4-only">List of other events fired (v4 only)</h4>
+<h4 id="list-of-other-events-fired">List of other events fired</h4>
+
+<p>Plaese note that all events other than <em>error</em> are in the order in which they occur.  Some events like <em>done</em> may only occur for video.</p>
 
 <table>
   <thead>
@@ -118,20 +120,24 @@ else {
   </thead>
   <tbody>
     <tr>
-      <td>done</td>
-      <td>When a video ad has finished playing</td>
+      <td>init</td>
+      <td>A campaign has been selected; this does not eliminate the possibility of an <em>noAds</em> event from firing later in the lifecycle</td>
     </tr>
     <tr>
-      <td>error</td>
-      <td>An error occurred while plyaing a video ad</td>
+      <td>rendered</td>
+      <td>Fired when an ad has rendered. A new property called <em>creativeType</em> which has a value of either <em>banner</em> or <em>video</em> is added to the <strong><em>ad-object</em></strong></td>
     </tr>
     <tr>
       <td>viewed</td>
       <td>Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand</td>
     </tr>
     <tr>
-      <td>init</td>
-      <td>A campaign has been selected; this does not eliminate the possibility of an <em>noAds</em> event from firing later in the lifecycle</td>
+      <td>done</td>
+      <td>When a video ad has finished playing</td>
+    </tr>
+    <tr>
+      <td>error</td>
+      <td>An error occurred while plyaing a video ad</td>
     </tr>
   </tbody>
 </table>

@@ -33,7 +33,7 @@ Example:
 Call the _render()_ method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.
 
 ~~~~~
-let external = $pop.render(document.getElementById('custom-content'), {
+let adObject = $pop.render(document.getElementById('custom-content'), {
 	"partner": "test",
 	"visit-id": "1234-5678-9abc-def0",
 	"width": "640px",
@@ -47,8 +47,8 @@ Where,
 
 * partner is the partner-code (provided by Populus Media)
 * visit-id is the visit-id associcated witht he visit
-* width is the maximum width of external content from Populus Media
-* height is the maximum height external content from Populus Media 
+* width is the maximum width of content provided by the library
+* height is the maximum height of content provided by the library
 * icdx is the ICD10 code associated with the session / visit
 
 For a complete list of attributes that could be passed, please refer the [home page](index.html).
@@ -56,16 +56,16 @@ For a complete list of attributes that could be passed, please refer the [home p
 
 ### Step 3 - Obtaining rendering status 
 
-Call to the _render()_ method on the API returns an object which can provide useful information about the the work that library is doing.  A _null_ response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called _noAds_ which is fired when the render() method could not show an ad.  Here's an illustration of the correct way to use output from the library
+Call to the _render()_ method on the API returns an object, called the ***ad-object***, which can provide useful information about the the work that library is doing.  A _null_ response from render() would meant that there was a problem early in the lifecycle of ad rendering.    For problems that occur late stage which is by nature asynchronous, an event listener can be added on the returned object to check if there were problems during rendering. The exact event to lookout for is called _noAds_ which is fired when the render() method could not show an ad.  Here's an illustration of the correct way to use output from the library
 
 Illustration:
 
 ~~~~~
-let external = $pop.render(...)
+let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
-if (external) {
-  external.addEventListener('noAds', () => {
+if (adObject ) {
+  adObject .addEventListener('noAds', () => {
     // No ad could be shown - late stage - during rendering
     ...
   })
@@ -77,13 +77,15 @@ else {
 ~~~~~
 
 
-#### List of other events fired (v4 only)
+#### List of other events fired
+
+Plaese note that all events other than *error* are in the order in which they occur.  Some events like *done* may only occur for video.
 
 | Event Name | Description |
 |------------|-------------|
+| init | A campaign has been selected; this does not eliminate the possibility of an *noAds* event from firing later in the lifecycle|
+| rendered | Fired when an ad has rendered. A new property called *creativeType* which has a value of either _banner_ or _video_ is added to the ***ad-object*** |
+| viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
 | done       | When a video ad has finished playing |
 | error      | An error occurred while plyaing a video ad |
-| viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
-| init | A campaign has been selected; this does not eliminate the possibility of an *noAds* event from firing later in the lifecycle|
-
 
