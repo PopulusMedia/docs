@@ -15,6 +15,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 
 | Attribute Name | Description | Required | Default |
 | ----- | -------- |----- | ----- |
+| network | An alphanumeric code provided by Populus | Yes | |
 | partner | An alphanumeric code assigned to the partner | Yes | |
 | visit-id | A unique session identifier associated with the visit used to tie back partner data with Populus data | Yes | |
 | anon-id | An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs | No 
