@@ -47,8 +47,8 @@ Where,
 
 * partner is the partner-code (provided by Populus Media)
 * visit-id is the visit-id associcated witht he visit
-* width is the maximum width of content provided by the library
-* height is the maximum height of content provided by the library
+* width is the width of the display container
+* height is the height of the display container
 * icdx is the ICD10 code associated with the session / visit
 
 For a complete list of attributes that could be passed, please refer the [home page](index.html).

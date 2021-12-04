@@ -17,6 +17,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | ----- | -------- |----- | ----- |
 | network | An alphanumeric code provided by Populus | Yes | |
 | partner | An alphanumeric code assigned to the partner | Yes | |
+| partner-subacct | An alphanumeric code that represents a sub-account on a partner to facilitate reporting | No | none |
 | visit-id | A unique session identifier associated with the visit used to tie back partner data with Populus data | Yes | |
 | anon-id | An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs | No 
 | suppress | A comma separate list of HTML element id's that must be hidden in case there's no content to show for the opportunity.  Alternatively you could use the utility class ***pop-suppress*** on those elements.  This is useful for hiding companian notices. | No | none |
