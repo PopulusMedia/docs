@@ -9,13 +9,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
 <meta property="og:description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
-<link rel="canonical" href="/docs/javascript" />
-<meta property="og:url" content="/docs/javascript" />
+<link rel="canonical" href="http://localhost:4000/docs/javascript" />
+<meta property="og:url" content="http://localhost:4000/docs/javascript" />
 <meta property="og:site_name" content="Populus Media - Integration Guide" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"JavaScript","url":"/docs/javascript","description":"Populus Media - Integration Guide for Telehealth Media Partners","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"JavaScript","url":"http://localhost:4000/docs/javascript","description":"Populus Media - Integration Guide for Telehealth Media Partners","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/docs/feed.xml" title="Populus Media - Integration Guide" /></head>
+<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Media - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Media - Integration Guide</a><nav class="site-nav">
@@ -40,7 +40,7 @@
   </header>
 
   <div class="post-content">
-    <p>Integrationg through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.</p>
+    <p>Integrating through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.</p>
 
 <h3 id="step-1---including-the-javascript-library-in-your-web-app-or-page">Step 1 - Including the JavaScript Library in your Web App or Page</h3>
 
@@ -107,9 +107,9 @@ else {
 }
 </code></pre></div></div>
 
-<h4 id="list-of-other-events-fired">List of other events fired</h4>
+<h4 id="list-of-all-events-fired">List of all events fired</h4>
 
-<p>Plaese note that all events other than <em>error</em> are in the order in which they occur.  Some events like <em>done</em> may only occur for video.</p>
+<p>Plaese note that all events other than error* are in the order in which they occur.  Some events like <em>done</em> may only occur for video.</p>
 
 <table>
   <thead>
@@ -122,6 +122,10 @@ else {
     <tr>
       <td>init</td>
       <td>A campaign has been selected; this does not eliminate the possibility of an <em>noAds</em> event from firing later in the lifecycle</td>
+    </tr>
+    <tr>
+      <td>noads</td>
+      <td>No matching ad was found</td>
     </tr>
     <tr>
       <td>rendered</td>
@@ -142,6 +146,32 @@ else {
   </tbody>
 </table>
 
+<h4 id="ad-object-attributes">Ad Object Attributes</h4>
+
+<p>In addition to events that gets fired, the Ad Object also contains attributes that contain useful information</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>campaignCode</td>
+      <td>An abbreviated campaign code associated with the campaign</td>
+    </tr>
+    <tr>
+      <td>rxname</td>
+      <td>The name or brand of the drug being advertised</td>
+    </tr>
+    <tr>
+      <td>landingPage</td>
+      <td>The landing page associated with the brand</td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
 

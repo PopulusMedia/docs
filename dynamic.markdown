@@ -4,7 +4,7 @@ title: JavaScript
 permalink: /javascript
 ---
 
-Integrationg through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.
+Integrating through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.
 
 ### Step 1 - Including the JavaScript Library in your Web App or Page
 
@@ -77,15 +77,26 @@ else {
 ~~~~~
 
 
-#### List of other events fired
+#### List of all events fired
 
-Plaese note that all events other than *error* are in the order in which they occur.  Some events like *done* may only occur for video.
+Plaese note that all events other than error* are in the order in which they occur.  Some events like *done* may only occur for video.
 
 | Event Name | Description |
 |------------|-------------|
 | init | A campaign has been selected; this does not eliminate the possibility of an *noAds* event from firing later in the lifecycle|
+| noads | No matching ad was found |
 | rendered | Fired when an ad has rendered. A new property called *creativeType* which has a value of either _banner_ or _video_ is added to the ***ad-object*** |
 | viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
 | done       | When a video ad has finished playing |
 | error      | An error occurred while plyaing a video ad |
 
+
+#### Ad Object Attributes
+
+In addition to events that gets fired, the Ad Object also contains attributes that contain useful information
+
+| Attribute Name | Description |
+|----------------|-------------|
+| campaignCode | An abbreviated campaign code associated with the campaign |
+| rxname | The name or brand of the drug being advertised |
+| landingPage | The landing page associated with the brand |
