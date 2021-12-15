@@ -93,7 +93,7 @@ Plaese note that all events other than error* are in the order in which they occ
 
 #### Ad Object Attributes
 
-In addition to events that gets fired, the Ad Object also contains attributes that contain useful information
+In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These are available only after the *init* event has been fired
 
 | Attribute Name | Description |
 |----------------|-------------|
