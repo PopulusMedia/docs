@@ -28,7 +28,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
 | keywords | A list of comma separate keywords for the session to be used to determine the best content for the opportunity. When passed, this attribute takes priority over the attribute _reason_ | No | |
-| icdx | An ICD10 code associated with the session. When passed, this takes priority over attributes _keywords_ and _reason_ | No | |
+| icdx | The first three characters of the ICD-10 code representing the disease category associated with the session. When passed, this takes priority over attributes _keywords_ and _reason_ | No | |
 
 For Populus Media to be able to show content one of the three attributes, ___reason___, ___keywords___ or ___icdx___ must be passed
 
