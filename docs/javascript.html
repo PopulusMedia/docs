@@ -9,13 +9,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
 <meta property="og:description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
-<link rel="canonical" href="http://localhost:4000/docs/javascript" />
-<meta property="og:url" content="http://localhost:4000/docs/javascript" />
+<link rel="canonical" href="/docs/javascript" />
+<meta property="og:url" content="/docs/javascript" />
 <meta property="og:site_name" content="Populus Media - Integration Guide" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"JavaScript","url":"http://localhost:4000/docs/javascript","description":"Populus Media - Integration Guide for Telehealth Media Partners","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"JavaScript","url":"/docs/javascript","description":"Populus Media - Integration Guide for Telehealth Media Partners","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Media - Integration Guide" /></head>
+<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/docs/feed.xml" title="Populus Media - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Media - Integration Guide</a><nav class="site-nav">
@@ -148,7 +148,7 @@ else {
 
 <h4 id="ad-object-attributes">Ad Object Attributes</h4>
 
-<p>In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These are available only after the <em>init</em> event has been fired</p>
+<p>In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These attribute <em>campaignCode</em> is available after the <em>init</em> event has been fired, the rest are available only after the <em>rendered</em> event</p>
 
 <table>
   <thead>
@@ -161,6 +161,10 @@ else {
     <tr>
       <td>campaignCode</td>
       <td>An abbreviated campaign code associated with the campaign</td>
+    </tr>
+    <tr>
+      <td>creativeType</td>
+      <td>Contains a value of either <strong>banner</strong> or <strong>video</strong> depending on creative selected</td>
     </tr>
     <tr>
       <td>rxname</td>

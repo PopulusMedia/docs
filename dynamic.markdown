@@ -93,10 +93,11 @@ Plaese note that all events other than error* are in the order in which they occ
 
 #### Ad Object Attributes
 
-In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These are available only after the *init* event has been fired
+In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These attribute *campaignCode* is available after the *init* event has been fired, the rest are available only after the *rendered* event
 
 | Attribute Name | Description |
 |----------------|-------------|
 | campaignCode | An abbreviated campaign code associated with the campaign |
+| creativeType | Contains a value of either **banner** or **video** depending on creative selected | 
 | rxname | The name or brand of the drug being advertised |
 | landingPage | The landing page associated with the brand |
