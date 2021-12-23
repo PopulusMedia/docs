@@ -24,7 +24,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | width | Maximum available width as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | 100% |
 | height | Maximum available height as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | auto |
 | aspect-ratio | Aspect ratio of the video player when a video is played on the parter site like ***4:3*** or ***16:9*** | No | 16:9 | 
-| visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre***, ***during*** or ***post*** | No | during
+| visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre*** which represents the user in the intake process, ***during*** which represents the waiting room or a chat window or ***post***  which is any time after the consult has completed | No | during
 | inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
 | keywords | A list of comma separate keywords for the session to be used to determine the best content for the opportunity. When passed, this attribute takes priority over the attribute _reason_ | No | |
