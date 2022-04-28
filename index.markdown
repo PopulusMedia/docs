@@ -21,8 +21,9 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | visit-id | A unique session identifier associated with the visit used to tie back partner data with Populus data | Yes | |
 | anon-id | An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs | No 
 | suppress | A comma separate list of HTML element id's that must be hidden in case there's no content to show for the opportunity.  Alternatively you could use the utility class ***pop-suppress*** on those elements.  This is useful for hiding companian notices. | No | none |
-| width | Maximum available width as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | 100% |
-| height | Maximum available height as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | auto |
+| width | Available width as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | 100% |
+| height | Available height as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | auto |
+| max-height | Maximum height in pixels which the the container can accomodate, only used when height=auto | No | 600px |
 | aspect-ratio | Aspect ratio of the video player when a video is played on the parter site like ***4:3*** or ***16:9*** | No | 16:9 | 
 | visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre*** which represents the user in the intake process, ***during*** which represents the waiting room or a chat window or ***post***  which is any time after the consult has completed | No | during
 | inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any

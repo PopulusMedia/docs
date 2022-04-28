@@ -84,7 +84,7 @@ Plaese note that all events other than error* are in the order in which they occ
 | Event Name | Description |
 |------------|-------------|
 | init | A campaign has been selected; this does not eliminate the possibility of an *noAds* event from firing later in the lifecycle|
-| noads | No matching ad was found |
+| noAds | No matching ad was found |
 | rendered | Fired when an ad has rendered. A new property called *creativeType* which has a value of either _banner_ or _video_ is added to the ***ad-object*** |
 | viewed     | Occurs when the video has been played for the minimum duration stipulated by either IAB or the brand |
 | done       | When a video ad has finished playing |
