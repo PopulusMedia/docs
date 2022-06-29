@@ -134,15 +134,39 @@
     </tr>
     <tr>
       <td>keywords</td>
-      <td>A list of comma separate keywords for the session to be used to determine the best content for the opportunity. When passed, this attribute takes priority over the attribute <em>reason</em></td>
+      <td>A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. Could also be other attributes associate with the patient like comorbodities or diagnosis made in previous visits</td>
       <td>No</td>
       <td> </td>
     </tr>
     <tr>
-      <td>icdx</td>
-      <td>The first three characters of the ICD-10 code representing the disease category associated with the session. When passed, this takes priority over attributes <em>keywords</em> and <em>reason</em></td>
+      <td>icd10</td>
+      <td>Diagnostic codes associated with the user</td>
       <td>No</td>
       <td> </td>
+    </tr>
+    <tr>
+      <td>gender</td>
+      <td>Gender the patient was born with where,<br /> M → Male, F → Female or X → Other or unknown</td>
+      <td>No</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>ageRange</td>
+      <td>User age range with the following bands:<br />  2 → 18-24<br />  3 → 25-34<br />  4 → 35-44<br />  5 → 45-54<br />  6 → 55-64 <br />  7 → 65+<br />  0 → unknown</td>
+      <td>No</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>User age, may be used if age ranges aren’t readily available</td>
+      <td>No</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td>race</td>
+      <td>Race associated with the where, <br />  1 → White, not hispanic<br />  2 → Black, not hispanic<br />  3 → Hispanic<br />  4 → American Indian or Alaska Native<br />  5 → Asian or Pacific Islander<br />   -1 → Missing or Uknown</td>
+      <td>No</td>
+      <td>-1</td>
     </tr>
   </tbody>
 </table>
