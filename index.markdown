@@ -36,5 +36,5 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | race | Race associated with the where, <br/>&emsp; 1 &rarr; White, not hispanic<br/>&emsp; 2 &rarr; Black, not hispanic<br/>&emsp; 3 &rarr; Hispanic<br/>&emsp; 4 &rarr; American Indian or Alaska Native<br/>&emsp; 5 &rarr; Asian or Pacific Islander<br/>&nbsp;&ensp; -1 &rarr; Missing or Uknown | No | -1 |
 
 
-For Populus Media to be able to show content one of the three attributes, ___reason___, ___keywords___ or ___icdx___ must be passed
+For Populus Media to be able to show content one of the three attributes, ___reason___, ___keywords___ or ___icd10___ must be passed
 
