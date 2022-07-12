@@ -28,7 +28,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre*** which represents the user in the intake process, ***during*** which represents the waiting room or a chat window or ***post***  which is any time after the consult has completed | No | during
 | inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
-| keywords | A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. May also contain other attributes associate user the patient like comorbodities or diagnosis made in previous visits. | No | |
+| keywords | A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. It may contain the speciality associated with the question or the visit.   May also contain other attributes associate user the patient like comorbodities or diagnosis made in previous visits. | No | |
 | icd10 | Diagnostic codes associated with the user | No | |
 | gender | Gender the patient was born with where,<br/> M &rarr; Male, F &rarr; Female or X &rarr; Other or unknown | No | X |
 | age-range | User age range with the following bands:<br/>&emsp; 2 &rarr; 18-24<br/>&emsp; 3 &rarr; 25-34<br/>&emsp; 4 &rarr; 35-44<br/>&emsp; 5 &rarr; 45-54<br/>&emsp; 6 &rarr; 55-64 <br/>&emsp; 7 &rarr; 65+<br/>&emsp; 0 &rarr; unknown| No | 0 | 

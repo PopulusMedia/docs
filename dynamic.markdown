@@ -38,7 +38,7 @@ let adObject = $pop.render(document.getElementById('custom-content'), {
 	"visit-id": "1234-5678-9abc-def0",
 	"width": "640px",
 	"height":"360px",
-	"icdx": "G20"
+	"icd10": "G20"
 })
 ~~~~~
 
@@ -49,7 +49,7 @@ Where,
 * visit-id is the visit-id associcated witht he visit
 * width is the width of the display container
 * height is the height of the display container
-* icdx is the ICD10 code associated with the session / visit
+* icd10 is the ICD10 code associated with the session / visit
 
 For a complete list of attributes that could be passed, please refer the [home page](index.html).
 
