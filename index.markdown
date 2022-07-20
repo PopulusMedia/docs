@@ -32,7 +32,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | icd10 | Diagnostic codes associated with the user | No | |
 | gender | Gender the patient was born with where,<br/> m &rarr; male, f &rarr; female or x &rarr; Other or unknown | No | x |
 | age-range | User age range with the following bands:<br/>&emsp; 2 &rarr; 18-24<br/>&emsp; 3 &rarr; 25-34<br/>&emsp; 4 &rarr; 35-44<br/>&emsp; 5 &rarr; 45-54<br/>&emsp; 6 &rarr; 55-64 <br/>&emsp; 7 &rarr; 65+<br/>&emsp; 0 &rarr; unknown| No | 0 | 
-| age | User age, may be used if age ranges aren't readily available | No | none |
+| age | User age, may be used if age ranges aren't readily available.  Will be used only if age-range isn't passed| No | none |
 | race | Race associated with the where, <br/>&emsp; 1 &rarr; White, not hispanic<br/>&emsp; 2 &rarr; Black, not hispanic<br/>&emsp; 3 &rarr; Hispanic<br/>&emsp; 4 &rarr; American Indian or Alaska Native<br/>&emsp; 5 &rarr; Asian or Pacific Islander<br/>&nbsp;&ensp; -1 &rarr; Missing or Uknown | No | -1 |
 
 
