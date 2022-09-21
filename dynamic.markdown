@@ -11,7 +11,7 @@ Integrating through a JavaScript API is a two-step process.  An optional third s
 The JavaScript library must be loaded with the request variable of ***mode=api***.
 
 ~~~~~
-<script src="https://cdn.populus-media.net/popcorn/v4/index.js?mode=api">
+<script src="https://cdn.populus-media.net/popcorn/v5/index.js?mode=api">
 </script>    
 ~~~~~
 
@@ -38,7 +38,7 @@ let adObject = $pop.render(document.getElementById('custom-content'), {
 	"visit-id": "1234-5678-9abc-def0",
 	"width": "640px",
 	"height":"360px",
-	"icd10": "G20"
+	"keywords": "plaque psoriasis, L40"
 })
 ~~~~~
 
@@ -49,7 +49,7 @@ Where,
 * visit-id is the visit-id associcated witht he visit
 * width is the width of the display container
 * height is the height of the display container
-* icd10 is the ICD10 code associated with the session / visit
+* keywords are the keywords associated with the session / visit
 
 For a complete list of attributes that could be passed, please refer the [home page](index.html).
 

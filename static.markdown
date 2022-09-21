@@ -15,8 +15,8 @@ Integrating through HTML is fairly straightforward.   A standard HTML &lt;ins&gt
 	data-pop-anon-id="u9875643210"
 	data-pop-width="640px"
   	data-pop-height="360px"
-	data-pop-icd10="G40">
-  <script src="https://cdn.populus-media.net/popcorn/v4/index.js" async></script>    
+	data-pop-keywords="migraine,headaches">
+  <script src="https://cdn.populus-media.net/popcorn/v5/index.js" async></script>    
 </ins>
 ~~~~~
 
@@ -27,6 +27,6 @@ Where,
 * data-anon-id is an anonymized user identifier on the partner app 
 * data-pop-width is the maximum width of external content from Populus Media
 * data-pop-height is the maximum height external content from Populus Media 
-* data-pop-icd10 is the ICD10 code associated with the session / visit
+* data-pop-keywords are the keywords associated with the session / visit
 
 The inline &lt;script&gt; tag is required to fetch the appropriate content from Populus Media based on the attributes passed in the tag and to render it within the &lt;ins&gt; element. For a complete list of attributes that could be passed, please refer the [home page](index.html).

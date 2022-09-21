@@ -5,7 +5,7 @@
 layout: default
 ---
 
-# Populus Media Libary Version 4
+# Populus Media Libary Version 5
 
 ## Integrating Web Applications
 
@@ -28,13 +28,9 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre*** which represents the user in the intake process, ***during*** which represents the waiting room or a chat window or ***post***  which is any time after the consult has completed | No | during
 | inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
-| keywords | A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. It may contain the specialty or therapeutic categories 	associated with the question or the visit.   May also contain other attributes associate user the patient like comorbodities or diagnosis made in previous visits. | No | |
-| icd10 | Diagnostic codes associated with the user | No | |
+| keywords | A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. It may contain the specialty or therapeutic categories associated with the question or the visit.   May also contain other attributes associate user the patient like comorbodities, ICD10 codes or diagnosis made in previous visits. | No | |
 | gender | Gender the patient was born with where,<br/> m &rarr; male, f &rarr; female or x &rarr; Other or unknown | No | x |
 | age-range | User age range with the following bands:<br/>&emsp; 2 &rarr; 18-24<br/>&emsp; 3 &rarr; 25-34<br/>&emsp; 4 &rarr; 35-44<br/>&emsp; 5 &rarr; 45-54<br/>&emsp; 6 &rarr; 55-64 <br/>&emsp; 7 &rarr; 65+<br/>&emsp; 0 &rarr; unknown| No | 0 | 
 | age | User age, may be used if age ranges aren't readily available.  Will be used only if age-range isn't passed| No | none |
 | race | Race associated with the where, <br/>&emsp; 1 &rarr; White, not hispanic<br/>&emsp; 2 &rarr; Black, not hispanic<br/>&emsp; 3 &rarr; Hispanic<br/>&emsp; 4 &rarr; American Indian or Alaska Native<br/>&emsp; 5 &rarr; Asian or Pacific Islander<br/>&nbsp;&ensp; -1 &rarr; Missing or Uknown | No | -1 |
-
-
-For Populus Media to be able to show content one of the three attributes, ___reason___, ___keywords___ or ___icd10___ must be passed
 
