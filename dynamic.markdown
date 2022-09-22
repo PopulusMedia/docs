@@ -38,7 +38,7 @@ let adObject = $pop.render(document.getElementById('custom-content'), {
 	"visit-id": "1234-5678-9abc-def0",
 	"width": "640px",
 	"height":"360px",
-	"keywords": "plaque psoriasis, L40"
+	"keywords": "plaque psoriasis,L40"
 })
 ~~~~~
 
