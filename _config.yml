@@ -30,6 +30,11 @@ github_username:  PopulusMedia
 # Build settings
 theme: minima
 destination: ./docs
+
+header_pages:
+  - dynamic.markdown
+  - static.markdown
+
 #plugins:
 #  - jekyll-feed
 
