@@ -5,7 +5,7 @@
 layout: default
 ---
 
-# Populus Media Libary Version 5
+# Populus Media Library Version 5
 
 ## Integrating Web Applications
 
