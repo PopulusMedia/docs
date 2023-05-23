@@ -98,7 +98,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
-if (adObject ) {
+if (adObject &amp;&amp; adObject.status != '' ) {
   adObject .addEventListener('noAds', () =&gt; {
     // No ad could be shown - late stage - during rendering
     ...
@@ -151,7 +151,11 @@ else {
 
 <h4 id="ad-object-attributes">Ad Object Attributes</h4>
 
-<p>In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These attribute <em>campaignCode</em> is available after the <em>init</em> event has been fired, the rest are available only after the <em>rendered</em> event</p>
+<p>In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  The attributes <em>status</em> and <em>reason</em> will be non-blank in case an ad cannot be show due to reasons like <em>frequency capping</em> within a visit, which could happen early in the lifecycle ad-rendering and making it unfeasible to be caught through an event listener.</p>
+
+<p>These attributes <em>campaignCode</em> is available after the <em>init</em> event has been fired.</p>
+
+<p>All other attributes become available only after the <em>rendered</em> event</p>
 
 <table>
   <thead>
@@ -161,6 +165,14 @@ else {
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>status</td>
+      <td>When non-blank indicates a condition that can cause an ad not to be rendered. Possible values are <strong>noAds</strong> or <strong>error</strong></td>
+    </tr>
+    <tr>
+      <td>reason</td>
+      <td>Supplements the status field by indicating reason why the ad could not be rendered</td>
+    </tr>
     <tr>
       <td>campaignCode</td>
       <td>An abbreviated campaign code associated with the campaign</td>

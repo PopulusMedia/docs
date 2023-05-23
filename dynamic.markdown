@@ -64,7 +64,7 @@ Illustration:
 let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
-if (adObject ) {
+if (adObject && adObject.status != '' ) {
   adObject .addEventListener('noAds', () => {
     // No ad could be shown - late stage - during rendering
     ...
@@ -93,10 +93,16 @@ Plaese note that all events other than error* are in the order in which they occ
 
 #### Ad Object Attributes
 
-In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  These attribute *campaignCode* is available after the *init* event has been fired, the rest are available only after the *rendered* event
+In addition to events that gets fired, the Ad Object also contains attributes that contain useful information.  The attributes *status* and *reason* will be non-blank in case an ad cannot be show due to reasons like *frequency capping* within a visit, which could happen early in the lifecycle ad-rendering and making it unfeasible to be caught through an event listener.
+
+These attributes *campaignCode* is available after the *init* event has been fired.
+
+All other attributes become available only after the *rendered* event
 
 | Attribute Name | Description |
 |----------------|-------------|
+| status | When non-blank indicates a condition that can cause an ad not to be rendered. Possible values are **noAds** or **error** |
+| reason | Supplements the status field by indicating reason why the ad could not be rendered | 
 | campaignCode | An abbreviated campaign code associated with the campaign |
 | creativeType | Contains a value of either **banner** or **video** depending on creative selected | 
 | rxname | The name or brand of the drug being advertised |
