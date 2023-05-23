@@ -65,7 +65,7 @@ let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
 if (adObject && adObject.status == '' ) {
-  adObject .addEventListener('noAds', () => {
+  adObject.addEventListener('noAds', () => {
     // No ad could be shown - late stage - during rendering
     ...
   })
