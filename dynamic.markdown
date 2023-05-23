@@ -79,7 +79,7 @@ else {
 
 #### List of all events fired
 
-Plaese note that all events other than error* are in the order in which they occur.  Some events like *done* may only occur for video.
+Plaese note that all events other than *error* are in the order in which they occur.  Some events like *done* may only occur for video.
 
 | Event Name | Description |
 |------------|-------------|
