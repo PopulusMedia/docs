@@ -4,7 +4,7 @@ title: Data Synch
 permalink: /data
 ---
 
-There are scenarios under which all data, like Phsycian Level Data, is not available during the ad workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.   
+There are scenarios under which all data, like Phsycian Level Data, is not available during the primary workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.   
 
 *This can be done by issuing a POST call to our API endpoint*
 
