@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/docs/javascript">JavaScript</a><a class="page-link" href="/docs/html">HTML</a></div>
+        <div class="trigger"><a class="page-link" href="/docs/javascript">JavaScript</a><a class="page-link" href="/docs/html">HTML</a><a class="page-link" href="/docs/data">Data Synch</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -98,8 +98,8 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let adObject = $pop.render(...)
 
 // If render returns an object, add an event listener
-if (adObject &amp;&amp; adObject.status != '' ) {
-  adObject .addEventListener('noAds', () =&gt; {
+if (adObject &amp;&amp; adObject.status == '' ) {
+  adObject.addEventListener('noAds', () =&gt; {
     // No ad could be shown - late stage - during rendering
     ...
   })
@@ -112,7 +112,7 @@ else {
 
 <h4 id="list-of-all-events-fired">List of all events fired</h4>
 
-<p>Plaese note that all events other than error* are in the order in which they occur.  Some events like <em>done</em> may only occur for video.</p>
+<p>Plaese note that all events other than <em>error</em> are in the order in which they occur.  Some events like <em>done</em> may only occur for video.</p>
 
 <table>
   <thead>

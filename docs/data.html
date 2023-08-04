@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Populus Inc - Media Integration Guide | Populus Media - Integration Guide for Telehealth Media Partners</title>
+<title>Data Synch | Populus Inc - Media Integration Guide</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Populus Inc - Media Integration Guide" />
+<meta property="og:title" content="Data Synch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
 <meta property="og:description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
-<link rel="canonical" href="http://localhost:4000/docs/404.html" />
-<meta property="og:url" content="http://localhost:4000/docs/404.html" />
+<link rel="canonical" href="http://localhost:4000/docs/data" />
+<meta property="og:url" content="http://localhost:4000/docs/data" />
 <meta property="og:site_name" content="Populus Inc - Media Integration Guide" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Populus Inc - Media Integration Guide" />
+<meta property="twitter:title" content="Data Synch" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Populus Media - Integration Guide for Telehealth Media Partners","headline":"Populus Inc - Media Integration Guide","url":"http://localhost:4000/docs/404.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Populus Media - Integration Guide for Telehealth Media Partners","headline":"Data Synch","url":"http://localhost:4000/docs/data"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Inc - Media Integration Guide" /></head>
 <body><header class="site-header" role="banner">
@@ -36,26 +36,40 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title">Data Synch</h1>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="post-content">
+    <p>There are scenarios under which all data, like Phsycian Level Data, is not available during the ad workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.</p>
+
+<p><em>This can be done by issuing a POST call to our API endpoint</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://&lt;api-endpoint&gt;/event/data/&lt;visit-id&gt;
+Content-Type: application/json
+
+POST
+{
+   "partner": "&lt;partner-code&gt;",
+   "secret": "&lt;partner-secret&gt;",
+   "npi": "987654321"
+}
+</code></pre></div></div>
+
+<p>Where,</p>
+
+<ul>
+  <li>visit-id is the visit-id associcated with the original visit</li>
+  <li>partner is the partner-code (provided by Populus Media)</li>
+  <li>secret is a partner specific hash (provided by Populus Media)</li>
+  <li>npi is the NPI number associated with the consulting povider</li>
+</ul>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
