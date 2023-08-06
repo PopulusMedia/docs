@@ -26,7 +26,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | max-height | Maximum height in pixels which the the container can accomodate, only used when height=auto | No | 600px |
 | aspect-ratio | Aspect ratio of the video player when a video is played on the parter site like ***4:3*** or ***16:9*** | No | 16:9 | 
 | visit-stage | The stage of the journey the user is in within the telemedicine visit. Possible values are ***pre*** which represents the user in the intake process, ***during*** which represents the waiting room or a chat window or ***post***  which is any time after the consult has completed | No | during
-| inventory-class | A value indicating what kind of content are acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
+| inventory-class | A value indicating the kind of content that is acceptable for the opportunity. Possible values are ***video***, ***display*** or ***any*** | No | any
 | reason | A user entered reason for the visit, this would be used to determine the best possible content for the opportunity | No | | 
 | keywords | A list of comma separate keywords for the user or session to be used to determine the best content for the opportunity. It may contain the specialty or therapeutic categories associated with the question or the visit.   May also contain other attributes associate user the patient like comorbodities, ICD10 codes or diagnosis made in previous visits. | No | |
 | gender | Gender the patient was born or identify: <br/> ***m*** &rarr; Male, ***f*** &rarr; Female, ***o*** &rarr; Other or ***x*** &rarr; Unknown | Yes | x |
