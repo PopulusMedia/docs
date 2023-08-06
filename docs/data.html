@@ -3,25 +3,25 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Data Synch | Populus Inc - Media Integration Guide</title>
+<title>Data Synch | Populus Media Inc - Integration Guide</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Data Synch" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
-<meta property="og:description" content="Populus Media - Integration Guide for Telehealth Media Partners" />
+<meta name="description" content="Populus Media - Integration Guide for Virtual Care Media" />
+<meta property="og:description" content="Populus Media - Integration Guide for Virtual Care Media" />
 <link rel="canonical" href="http://localhost:4000/docs/data" />
 <meta property="og:url" content="http://localhost:4000/docs/data" />
-<meta property="og:site_name" content="Populus Inc - Media Integration Guide" />
+<meta property="og:site_name" content="Populus Media Inc - Integration Guide" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Synch" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Populus Media - Integration Guide for Telehealth Media Partners","headline":"Data Synch","url":"http://localhost:4000/docs/data"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Populus Media - Integration Guide for Virtual Care Media","headline":"Data Synch","url":"http://localhost:4000/docs/data"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Inc - Media Integration Guide" /></head>
+<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Media Inc - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Inc - Media Integration Guide</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Media Inc - Integration Guide</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -43,7 +43,7 @@
   </header>
 
   <div class="post-content">
-    <p>There are scenarios under which all data, like Phsycian Level Data, is not available during the ad workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.</p>
+    <p>There are scenarios under which all data, like Phsycian Level Data, is not available during the primary workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.</p>
 
 <p><em>This can be done by issuing a POST call to our API endpoint</em></p>
 
@@ -53,8 +53,8 @@ Content-Type: application/json
 POST
 {
    "partner": "&lt;partner-code&gt;",
-   "secret": "&lt;partner-secret&gt;",
-   "npi": "987654321"
+   "token": "&lt;partner-token&gt;",
+   "npi": "9876543210"
 }
 </code></pre></div></div>
 
@@ -63,7 +63,7 @@ POST
 <ul>
   <li>visit-id is the visit-id associcated with the original visit</li>
   <li>partner is the partner-code (provided by Populus Media)</li>
-  <li>secret is a partner specific hash (provided by Populus Media)</li>
+  <li>token is a partner specific hash (provided by Populus Media)</li>
   <li>npi is the NPI number associated with the consulting povider</li>
 </ul>
 
@@ -77,19 +77,19 @@ POST
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Populus Inc - Media Integration Guide</h2>
+    <h2 class="footer-heading">Populus Media Inc - Integration Guide</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Populus Inc - Media Integration Guide</li><li><a class="u-email" href="mailto:info@populus-media.com">info@populus-media.com</a></li></ul>
+          <li class="p-name">Populus Media Inc - Integration Guide</li><li><a class="u-email" href="mailto:info@populus-media.com">info@populus-media.com</a></li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/PopulusMedia"><svg class="svg-icon"><use xlink:href="/docs/assets/minima-social-icons.svg#github"></use></svg> <span class="username">PopulusMedia</span></a></li><li><a href="https://www.twitter.com/IncPopulus"><svg class="svg-icon"><use xlink:href="/docs/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">IncPopulus</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Populus Media - Integration Guide for Telehealth Media Partners  </p>
+        <p>Populus Media - Integration Guide for Virtual Care Media  </p>
       </div>
     </div>
 

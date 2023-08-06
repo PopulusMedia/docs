@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Populus Inc - Media Integration Guide
+title: Populus Media Inc - Integration Guide
 email: info@populus-media.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Populus Media - Integration Guide for Telehealth Media Partners  
+  Populus Media - Integration Guide for Virtual Care Media  
 baseurl: "/docs" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: IncPopulus

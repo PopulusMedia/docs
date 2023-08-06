@@ -15,8 +15,8 @@ Content-Type: application/json
 POST
 {
    "partner": "<partner-code>",
-   "secret": "<partner-secret>",
-   "npi": "987654321"
+   "token": "<partner-token>",
+   "npi": "9876543210"
 }
 ~~~~~
 
@@ -24,5 +24,5 @@ Where,
 
 * visit-id is the visit-id associcated with the original visit
 * partner is the partner-code (provided by Populus Media)
-* secret is a partner specific hash (provided by Populus Media)
+* token is a partner specific hash (provided by Populus Media)
 * npi is the NPI number associated with the consulting povider

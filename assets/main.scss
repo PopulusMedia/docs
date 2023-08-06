@@ -1,6 +1,12 @@
 ---
 ---
 @import "minima";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 body {
-	font-family: Times New Roman, Source Serif
+	font-family: 'PT Serif', serif;
 }
+
+/** Wrapper */
+.wrapper { max-width: -webkit-calc(1000px - (30px * 2)); max-width: calc(1000px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
