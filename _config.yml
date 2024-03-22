@@ -35,6 +35,7 @@ header_pages:
   - dynamic.markdown
   - static.markdown
   - data.markdown
+  - pixel.markdown
 
 #plugins:
 #  - jekyll-feed
