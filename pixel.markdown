@@ -17,3 +17,4 @@ Where,
 * partner is the partner-code (provided by Populus Media)
 * campaign is a the name of the campaign (provided by Populus Media)
 * email is the email address of the recipient
+* npi is the npi-number associated with the HCP opening the email
