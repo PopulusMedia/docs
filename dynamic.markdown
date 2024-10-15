@@ -20,7 +20,7 @@ Once the library loads, the API is exposed through a window object called ***$po
 
 ### Step 2 - Calling the JavaScript API
 
-Create and record the element-id associated with the container where extenal content from Populus Media would render.  In the example below, the parent container identifier is *custom-content*. Please note that the container element can also be generated dynamically.
+Create and record the element-id associated with the container where extenal content from Populus would render.  In the example below, the parent container identifier is *custom-content*. Please note that the container element can also be generated dynamically.
 
 Example:
 
@@ -45,7 +45,7 @@ let adObject = $pop.render(document.getElementById('custom-content'), {
 
 Where,
 
-* partner is the partner-code (provided by Populus Media)
+* partner is the partner-code (provided by Populus)
 * visit-id is the visit-id associcated witht he visit
 * width is the width of the display container
 * height is the height of the display container

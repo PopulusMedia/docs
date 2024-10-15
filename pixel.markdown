@@ -13,8 +13,8 @@ Transparent or 1x1 pixels can be used to send back additional event data to the 
 
 Where,
 
-* server-url is the URL associated with the pixel (provided by Populus Media) 
+* server-url is the URL associated with the pixel (provided by Populus) 
 * partner is the partner-code (provided by Populus Media)
-* campaign is a the name of the campaign (provided by Populus Media)
+* campaign is a the name of the campaign (provided by Populus)
 * email is the email address of the recipient
 * npi is the npi-number associated with the HCP opening the email

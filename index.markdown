@@ -5,7 +5,7 @@
 layout: default
 ---
 
-# Populus Media Library Version 5
+# Populus Health Tech - Media Library Version 5
 
 ## Integrating Web Applications
 
