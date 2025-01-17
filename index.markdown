@@ -20,7 +20,7 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | partner-subacct | An alphanumeric code that represents a sub-account on a partner to facilitate reporting | No | none |
 | visit-id | A unique session identifier associated with the visit used to tie back partner data with Populus data | Yes | |
 | anon-id | An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs | No 
-| consent | A flag to indicate if the user has consented to being shown ads, values are 0 (No) and 1 (Yes) | Yes | 0 
+| consent | A flag to indicate if the user has agreed to optional marketing consent, values are 0 (No) and 1 (Yes) | Yes | 0 
 | suppress | A comma separate list of HTML element id's that must be hidden in case there's no content to show for the opportunity.  Alternatively you could use the utility class ***pop-suppress*** on those elements.  This is useful for hiding companian notices. | No | none |
 | width | Available width as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | 100% |
 | height | Available height as a percentage (%) of the containing element or as an absolute value in pixels (px). | No | auto |
