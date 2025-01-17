@@ -9,16 +9,16 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
 <meta property="og:description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
-<link rel="canonical" href="http://localhost:4000/docs/" />
-<meta property="og:url" content="http://localhost:4000/docs/" />
+<link rel="canonical" href="/docs/" />
+<meta property="og:url" content="/docs/" />
 <meta property="og:site_name" content="Populus Health Tech - Integration Guide" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Populus Health Tech - Integration Guide" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide for Virtual Care Media","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"http://localhost:4000/docs/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide for Virtual Care Media","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"/docs/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
+<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Health Tech - Integration Guide</a><nav class="site-nav">
@@ -83,6 +83,12 @@
       <td>An anonymized but uniquely identifiable user id on the partner network. While normally optional, this value must be passed to be considered for campaigns that require user opt-outs</td>
       <td>No</td>
       <td> </td>
+    </tr>
+    <tr>
+      <td>consent</td>
+      <td>A flag to indicate if the user has consented to being shown ads, values are 0 (No) and 1 (Yes)</td>
+      <td>Yes</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>suppress</td>
@@ -164,7 +170,7 @@
     </tr>
     <tr>
       <td>pld</td>
-      <td>Physician Level Data in the form  <strong><em>“npi=9876543210;email=aaa@bbb.ccc”</em></strong> where 9876543210 is the NPI of the consulting healthcare provider and aaa@bbb.ccc is the email address. If there are multiple NPIs involved, pass them as a list, separated by commas  <br /><br />Example: <br />  pld=”npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc”</td>
+      <td>Physician Level Data in the form  <strong><em>“npi=9876543210;email=aaa@bbb.ccc”</em></strong> , where 9876543210 is the NPI of the consulting healthcare provider and aaa@bbb.ccc is the email address. If there are multiple NPIs involved, pass them as a list, separated by commas  <br /><br />Example: <br />  pld=”npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc”</td>
       <td>Yes</td>
       <td>none</td>
     </tr>
