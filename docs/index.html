@@ -9,16 +9,16 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
 <meta property="og:description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
-<link rel="canonical" href="/docs/" />
-<meta property="og:url" content="/docs/" />
+<link rel="canonical" href="http://localhost:4000/docs/" />
+<meta property="og:url" content="http://localhost:4000/docs/" />
 <meta property="og:site_name" content="Populus Health Tech - Integration Guide" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Populus Health Tech - Integration Guide" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide for Virtual Care Media","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"/docs/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide for Virtual Care Media","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"http://localhost:4000/docs/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
+<link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/docs/">Populus Health Tech - Integration Guide</a><nav class="site-nav">
@@ -84,7 +84,7 @@
       <td>No</td>
       <td> </td>
     </tr>
-    <tr id="consent">
+    <tr>
       <td>consent</td>
       <td>A flag to indicate if the user has agreed to optional marketing consent, values are 0 (No) and 1 (Yes)</td>
       <td>Yes</td>
@@ -122,7 +122,7 @@
     </tr>
     <tr>
       <td>visit-stage</td>
-      <td>The stage of the journey the user is in within the telemedicine visit. Possible values are <strong><em>pre</em></strong> which represents the user in the intake process, <strong><em>during</em></strong> which represents the waiting room or a chat window or <strong><em>post</em></strong>  which is any time after the consult has completed</td>
+      <td>Specific to a telemedicine visit, the stage of the journey the patient is in. Possible values are <strong><em>pre</em></strong> which represents the user in the intake process, <strong><em>during</em></strong> which represents the waiting room or a chat window or <strong><em>post</em></strong>  which is any time after the consult has completed. May not apply to all workflows</td>
       <td>No</td>
       <td>during</td>
     </tr>
@@ -140,31 +140,31 @@
     </tr>
     <tr>
       <td>keywords</td>
-      <td>A list of comma separated keywords for the user or session to be used to determine the best content for the opportunity. It may contain the specialty or therapeutic categories associated with the question or the visit.   May also contain other attributes associated with the user like comorbodities, ICD10 codes or diagnosis made in previous visits.</td>
-      <td>No</td>
+      <td>A list of comma separated keywords like speciality or thereapeutic category associated with the session and used to determine the best content for the opportunity. May also contain other attributes associated with the session like previous diagnosis or codes from a vocabulary like ICD10, NDC, RxNorm, J-code, SNOMED CT, etc.</td>
+      <td>Yes</td>
       <td> </td>
     </tr>
     <tr>
       <td>gender</td>
-      <td>Gender the patient was born or identify: <br /> <strong><em>m</em></strong> → Male, <strong><em>f</em></strong> → Female, <strong><em>o</em></strong> → Other or <strong><em>x</em></strong> → Unknown</td>
+      <td>Gender the patient was born with or identifies: <br /> <strong><em>m</em></strong> → Male, <strong><em>f</em></strong> → Female, <strong><em>o</em></strong> → Other or <strong><em>x</em></strong> → Unknown</td>
       <td>Yes</td>
       <td>x</td>
     </tr>
     <tr>
       <td>age-range</td>
-      <td>User age range with the following bands:<br />  2 → 18-24<br />  3 → 25-34<br />  4 → 35-44<br />  5 → 45-54<br />  6 → 55-64 <br />  7 → 65+<br />  0 → Unknown</td>
+      <td>Patient age range with the following bands:<br />  2 → 18-24<br />  3 → 25-34<br />  4 → 35-44<br />  5 → 45-54<br />  6 → 55-64 <br />  7 → 65+<br />  0 → Unknown</td>
       <td>Yes</td>
       <td>0</td>
     </tr>
     <tr>
       <td>age</td>
-      <td>User age, may be used if age ranges aren’t readily available.  Will be used only if age-range isn’t passed</td>
+      <td>Patient age, may be used if age ranges aren’t readily available.  Used only if age-range isn’t passed</td>
       <td>Yes</td>
       <td>none</td>
     </tr>
     <tr>
       <td>race</td>
-      <td>Race associated with the where, <br />  1 → White, not hispanic<br />  2 → Black, not hispanic<br />  3 → Hispanic<br />  4 → American Indian or Alaska Native<br />  5 → Asian or Pacific Islander<br />   -1 → Missing or Unknown</td>
+      <td>Patient race where, <br />  1 → White, not hispanic<br />  2 → Black, not hispanic<br />  3 → Hispanic<br />  4 → American Indian or Alaska Native<br />  5 → Asian or Pacific Islander<br />   -1 → Missing or Unknown</td>
       <td>No</td>
       <td>-1</td>
     </tr>
