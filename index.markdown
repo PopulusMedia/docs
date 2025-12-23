@@ -5,7 +5,7 @@
 layout: default
 ---
 
-# Populus Health Tech - Media Library Version 5
+# Populus Health Tech - Integration Guide
 
 ## Integrating Web Applications
 
@@ -34,5 +34,4 @@ To see how attributes can be passed, please check out the sections on [HTML](htm
 | age-range | Patient age range with the following bands:<br/>&emsp; 2 &rarr; 18-24<br/>&emsp; 3 &rarr; 25-34<br/>&emsp; 4 &rarr; 35-44<br/>&emsp; 5 &rarr; 45-54<br/>&emsp; 6 &rarr; 55-64 <br/>&emsp; 7 &rarr; 65+<br/>&emsp; 0 &rarr; Unknown| Yes | 0 | 
 | age | Patient age, may be used if age ranges aren't readily available.  Used only if age-range isn't passed| Yes | none |
 | race | Patient race where, <br/>&emsp; 1 &rarr; White, not hispanic<br/>&emsp; 2 &rarr; Black, not hispanic<br/>&emsp; 3 &rarr; Hispanic<br/>&emsp; 4 &rarr; American Indian or Alaska Native<br/>&emsp; 5 &rarr; Asian or Pacific Islander<br/>&nbsp;&ensp; -1 &rarr; Missing or Unknown | No | -1 |
-| pld | Physician Level Data in the form  ***"npi=9876543210;email=aaa@bbb.ccc"*** , where 9876543210 is the NPI of the consulting healthcare provider and aaa@bbb.ccc is the email address. If there are multiple NPIs involved, pass them as a list, separated by commas  <br/><br/>Example: <br/>&emsp; pld="npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc" | Yes | none |
-
+| pld | Physician Level Data in the form  ***"npi=9876543210;email=aaa@bbb.ccc"*** , where 9876543210 is the NPI of the HCP and aaa@bbb.ccc is the email address of the HCP. If there are multiple HCPs are involved, pass them as an ordered list, separated by commas  <br/><br/>Example: <br/>&emsp; pld="npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc" | Yes | none |

@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Populus Health Tech - Integration Guide | Populus Health Tech - Integration Guide for Virtual Care Media</title>
+<title>Populus Health Tech - Integration Guide | Populus Health Tech - Integration Guide</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Populus Health Tech - Integration Guide" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
-<meta property="og:description" content="Populus Health Tech - Integration Guide for Virtual Care Media" />
+<meta name="description" content="Populus Health Tech - Integration Guide" />
+<meta property="og:description" content="Populus Health Tech - Integration Guide" />
 <link rel="canonical" href="http://localhost:4000/docs/" />
 <meta property="og:url" content="http://localhost:4000/docs/" />
 <meta property="og:site_name" content="Populus Health Tech - Integration Guide" />
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Populus Health Tech - Integration Guide" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide for Virtual Care Media","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"http://localhost:4000/docs/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Populus Health Tech - Integration Guide","headline":"Populus Health Tech - Integration Guide","name":"Populus Health Tech - Integration Guide","url":"http://localhost:4000/docs/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
@@ -31,12 +31,12 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/docs/javascript">JavaScript</a><a class="page-link" href="/docs/html">HTML</a><a class="page-link" href="/docs/data">Data Synch</a><a class="page-link" href="/docs/pixels">Tracking Pixels</a></div>
+        <div class="trigger"><a class="page-link" href="/docs/javascript">JavaScript</a><a class="page-link" href="/docs/html">HTML</a><a class="page-link" href="/docs/embed">Embedded</a><a class="page-link" href="/docs/data">Data Synch</a><a class="page-link" href="/docs/pixels">Tracking Pixels</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h1 id="populus-health-tech---media-library-version-5">Populus Health Tech - Media Library Version 5</h1>
+        <h1 id="populus-health-tech---integration-guide">Populus Health Tech - Integration Guide</h1>
 
 <h2 id="integrating-web-applications">Integrating Web Applications</h2>
 
@@ -170,13 +170,12 @@
     </tr>
     <tr>
       <td>pld</td>
-      <td>Physician Level Data in the form  <strong><em>“npi=9876543210;email=aaa@bbb.ccc”</em></strong> , where 9876543210 is the NPI of the consulting healthcare provider and aaa@bbb.ccc is the email address. If there are multiple NPIs involved, pass them as a list, separated by commas  <br /><br />Example: <br />  pld=”npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc”</td>
+      <td>Physician Level Data in the form  <strong><em>“npi=9876543210;email=aaa@bbb.ccc”</em></strong> , where 9876543210 is the NPI of the HCP and aaa@bbb.ccc is the email address of the HCP. If there are multiple HCPs are involved, pass them as an ordered list, separated by commas  <br /><br />Example: <br />  pld=”npi=9876543210,1234567890,2343234110;email=aaa@bbb.ccc”</td>
       <td>Yes</td>
       <td>none</td>
     </tr>
   </tbody>
 </table>
-
 
       </div>
     </main><footer class="site-footer h-card">
@@ -196,7 +195,7 @@
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Populus Health Tech - Integration Guide for Virtual Care Media  </p>
+        <p>Populus Health Tech - Integration Guide  </p>
       </div>
     </div>
 

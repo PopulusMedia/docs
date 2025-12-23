@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Data Synch | Populus Health Tech - Integration Guide</title>
+<title>Embedded | Populus Health Tech - Integration Guide</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Data Synch" />
+<meta property="og:title" content="Embedded" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Populus Health Tech - Integration Guide" />
 <meta property="og:description" content="Populus Health Tech - Integration Guide" />
-<link rel="canonical" href="http://localhost:4000/docs/data" />
-<meta property="og:url" content="http://localhost:4000/docs/data" />
+<link rel="canonical" href="http://localhost:4000/docs/embed" />
+<meta property="og:url" content="http://localhost:4000/docs/embed" />
 <meta property="og:site_name" content="Populus Health Tech - Integration Guide" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Synch" />
+<meta property="twitter:title" content="Embedded" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Populus Health Tech - Integration Guide","headline":"Data Synch","url":"http://localhost:4000/docs/data"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Populus Health Tech - Integration Guide","headline":"Embedded","url":"http://localhost:4000/docs/embed"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/docs/feed.xml" title="Populus Health Tech - Integration Guide" /></head>
 <body><header class="site-header" role="banner">
@@ -39,35 +39,30 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Data Synch</h1>
+    <h1 class="post-title">Embedded</h1>
   </header>
 
   <div class="post-content">
-    <p>There are scenarios under which all data, like Phsycian Level Data, is not available during the primary workflow.  In those cases, data can be sent after the fact via a server to server (S2S) API call using the visit-id that was used for the original visit.</p>
+    <p>Embedding condent through and IFRAME is fairly straightforward.  The IFRAME is served from a predefined URI and parameters are passed as request varaibles to the URI.</p>
 
-<p><em>This can be done by issuing a POST call to our API endpoint</em></p>
+<p><em>Example Embedded URI</em></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://&lt;api-endpoint&gt;/event/data/&lt;visit-id&gt;
-Content-Type: application/json
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://cdn.populus-media.net/popcorn/v5/embed.html?partner=test&amp;visit-id=1234-5678-9abc-def0&amp;width=300&amp;height=250&amp;npi=9876543210&amp;email=aaa@bbb.ccc
 
-POST
-{
-   "net": "&lt;network-code&gt;",
-   "partner": "&lt;partner-code&gt;",
-   "token": "&lt;partner-token&gt;",
-   "npi": "9876543210"
-}
 </code></pre></div></div>
 
 <p>Where,</p>
 
 <ul>
-  <li>visit-id is the visit-id associcated with the original visit</li>
-  <li>net is a constant (provided by Populus)</li>
   <li>partner is the partner-code (provided by Populus)</li>
-  <li>token is a partner specific hash (provided by Populus)</li>
-  <li>npi is the NPI number associated with the health care provider</li>
+  <li>visit-id is the visit-id associcated witht he visit</li>
+  <li>width is the maximum width of external content from Populus</li>
+  <li>height is the maximum height external content from Populus</li>
+  <li>npi is the npi number associated with the HCP</li>
+  <li>email is the email associated with the HCP</li>
 </ul>
+
+<p>For a complete list of attributes that could be passed, please refer the <a href="index.html">home page</a>.</p>
 
   </div>
 
