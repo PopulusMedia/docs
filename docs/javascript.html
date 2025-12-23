@@ -43,7 +43,7 @@
   </header>
 
   <div class="post-content">
-    <p>Integrating through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.</p>
+    <p>Integration via the JavaScript API is a two-step process. An optional third step allows developers to retrieve the status of the ad rendering process through an event handler. This approach is the most advanced and provides developers with the greatest level of control.</p>
 
 <h3 id="step-1---including-the-javascript-library-in-your-web-app-or-page">Step 1 - Including the JavaScript Library in your Web App or Page</h3>
 
@@ -66,7 +66,7 @@
 &lt;/div&gt;
 </code></pre></div></div>
 
-<p>Call the <em>render()</em> method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.</p>
+<p>Call the <em>render()</em> method on the API.  The render method takes the parent container as the first argument and a list of parameters are passed as properties of an object as the second.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let adObject = $pop.render(document.getElementById('custom-content'), {
 	"partner": "test",
@@ -87,7 +87,7 @@
   <li>keywords are the keywords associated with the session / visit</li>
 </ul>
 
-<p>For a complete list of attributes that could be passed, please refer the <a href="index.html">home page</a>.</p>
+<p>For a complete list of parameters that could be passed, refer <a href="index.html#parameters">here</a>.</p>
 
 <h3 id="step-3---obtaining-rendering-status">Step 3 - Obtaining rendering status</h3>
 

@@ -4,7 +4,7 @@ title: Embedded
 permalink: /embed
 ---
 
-Embedding condent through and IFRAME is fairly straightforward.  The IFRAME is served from a predefined URI and parameters are passed as request varaibles to the URI.
+Embedding content through an iframe is straightforward. The iframe is served from a predefined URI, with parameters passed as request variables to that URI.
 
 *Example Embedded URI*
 
@@ -22,4 +22,4 @@ Where,
 * npi is the npi number associated with the HCP
 * email is the email associated with the HCP
 
-For a complete list of attributes that could be passed, please refer the [home page](index.html).
+For a complete list of parameters that could be passed, please refer [here](index.html#parameters).

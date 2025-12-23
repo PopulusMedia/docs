@@ -7,13 +7,23 @@ layout: default
 
 # Populus Health Tech - Integration Guide
 
-## Integrating Web Applications
+## Methodology
 
-Partner that have a web-application based platform can integrate via either HTML tag or a JavaScript based API. Data can be passed to the HTML tag through standard data attributes and the JavaScript API through a JSON object.  A call needs to be made out for every opportunity tthat exists on the partner's app by either through one of the methods described here.  
+A callout to Populus must be made for every partner-side opportunity, using one of the methods described here.
 
-To see how attributes can be passed, please check out the sections on [HTML](html) and [JavaScript](javascript) for examples.  The following set of attributes can be passed 
+**Web Applications**
 
-| Attribute Name | Description | Required | Default |
+Partners with web application–based platforms can integrate using either an HTML tag or a JavaScript-based API. Parameters can be passed to the HTML tag as data attributes (*data-\**) and to the JavaScript API via a JSON object.  
+
+**Embedded or non-Web**
+
+Partners may also integrate by embedding an iframe, with opportunity-related parameters passed as request variables in the iframe’s src attribute. For non–web based integrations, such as Android or iOS, please contact your Populus technical representative.
+
+## Parameters
+
+To see how paratermers are passed, please check out the sections on [HTML](html), [JavaScript](javascript) and [Embedded](embed) for examples.  The following set of parameters can be passed 
+
+| Parameter Name | Description | Required | Default |
 | ----- | -------- |----- | ----- |
 | network | An alphanumeric code provided by Populus | Yes | |
 | partner | An alphanumeric code assigned to the partner | Yes | |

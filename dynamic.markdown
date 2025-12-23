@@ -4,7 +4,7 @@ title: JavaScript
 permalink: /javascript
 ---
 
-Integrating through a JavaScript API is a two-step process.  An optional third step allows developers to obtain status of the ad rendering process through an event handler.
+Integration via the JavaScript API is a two-step process. An optional third step allows developers to retrieve the status of the ad rendering process through an event handler. This approach is the most advanced and provides developers with the greatest level of control.
 
 ### Step 1 - Including the JavaScript Library in your Web App or Page
 
@@ -30,7 +30,7 @@ Example:
 </div>
 ~~~~~
 
-Call the _render()_ method on the API.  The render method takes the parent container as the first argument and a list of attributes are passed as properties of an object as the second.
+Call the _render()_ method on the API.  The render method takes the parent container as the first argument and a list of parameters are passed as properties of an object as the second.
 
 ~~~~~
 let adObject = $pop.render(document.getElementById('custom-content'), {
@@ -51,7 +51,7 @@ Where,
 * height is the height of the display container
 * keywords are the keywords associated with the session / visit
 
-For a complete list of attributes that could be passed, please refer the [home page](index.html).
+For a complete list of parameters that could be passed, refer [here](index.html#parameters).
 
 
 ### Step 3 - Obtaining rendering status 

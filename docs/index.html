@@ -38,16 +38,26 @@
       <div class="wrapper">
         <h1 id="populus-health-tech---integration-guide">Populus Health Tech - Integration Guide</h1>
 
-<h2 id="integrating-web-applications">Integrating Web Applications</h2>
+<h2 id="methodology">Methodology</h2>
 
-<p>Partner that have a web-application based platform can integrate via either HTML tag or a JavaScript based API. Data can be passed to the HTML tag through standard data attributes and the JavaScript API through a JSON object.  A call needs to be made out for every opportunity tthat exists on the partner’s app by either through one of the methods described here.</p>
+<p>A callout to Populus must be made for every partner-side opportunity, using one of the methods described here.</p>
 
-<p>To see how attributes can be passed, please check out the sections on <a href="html">HTML</a> and <a href="javascript">JavaScript</a> for examples.  The following set of attributes can be passed</p>
+<p><strong>Web Applications</strong></p>
+
+<p>Partners with web application–based platforms can integrate using either an HTML tag or a JavaScript-based API. Parameters can be passed to the HTML tag as data attributes (<em>data-*</em>) and to the JavaScript API via a JSON object.</p>
+
+<p><strong>Embedded or non-Web</strong></p>
+
+<p>Partners may also integrate by embedding an iframe, with opportunity-related parameters passed as request variables in the iframe’s src attribute. For non–web based integrations, such as Android or iOS, please contact your Populus technical representative.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>To see how paratermers are passed, please check out the sections on <a href="html">HTML</a>, <a href="javascript">JavaScript</a> and <a href="embed">Embedded</a> for examples.  The following set of parameters can be passed</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute Name</th>
+      <th>Parameter Name</th>
       <th>Description</th>
       <th>Required</th>
       <th>Default</th>
