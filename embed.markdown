@@ -9,7 +9,7 @@ Embedding content through an iframe is straightforward. The iframe is served fro
 *Example Embedded URI*
 
 ~~~~~
-https://cdn.populus-media.net/popcorn/v5/embed.html?partner=test&visit-id=1234-5678-9abc-def0&width=300&height=250&npi=9876543210&email=aaa@bbb.ccc
+https://cdn.populus-media.net/popcorn/v5/embed.html?partner=test&visit-id=1234-5678-9abc-def0&width=300&height=250&npi=9876543210&email=aaa@bbb.ccc&zone=dev
 
 ~~~~~
 
