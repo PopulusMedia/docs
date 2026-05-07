@@ -9,7 +9,12 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 ### Step 1: Accept the Invitation
 - Check your email inbox for an invitation from Domo  
+
+
 ![Domo Invitation Page](../docs/assets/domo-invitation.png)
+
+
+
 - Subject line: **"Congrats, you just got Domo'd!"**  
 - Open the email and click on **Get Started**
 
@@ -17,7 +22,12 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 ### Step 2: Open Login Page
 - After clicking **Get Started**, you will be redirected to the Domo login page  
+
+
 ![Domo login Page](../docs/assets/domo-login.png)
+
+
+
 
 
 ---
@@ -29,7 +39,15 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 ### Step 4: Reset Password (First-Time Users Only)
 - Click on **Forgot Password**  
+
+
+
+
 ![Domo forgot password Page](../docs/assets/domo-forgot-password.png)
+
+
+
+
 
 - Enter your registered email address  
 - Click on **Request Reset Link**  
@@ -38,7 +56,12 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 ### Step 5: Set Your Password
 - Check your email inbox  
+
+
+
 ![Domo forgot password link](../docs/assets/domo-reset-password.png)
+
+
 
 - Open the password reset email  
 - Click on the reset link  
@@ -48,7 +71,12 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 ### Step 6: Login to Domo
 - Go back to the original invitation email  
+
+
+
 ![Domo Invitation Page](../docs/assets/domo-invitation.png)
+
+
 - Click **Get Started** again  
 - Click on **Direct Sign-On**  
 - Enter your email and newly created password  
