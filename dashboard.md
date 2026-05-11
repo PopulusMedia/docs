@@ -18,7 +18,7 @@ This guide will help you log in to Domo for the first time and access the Populu
 - Check your email inbox for an invitation from Domo  
 
 
-![Domo Invitation Page](../docs/assets/domo-invitation.png)
+![Domo Invitation Page](assets/domo-invitation.png)
 
 
 
@@ -31,7 +31,7 @@ This guide will help you log in to Domo for the first time and access the Populu
 - After clicking **Get Started**, you will be redirected to the Domo login page  
 
 
-![Domo login Page](../docs/assets/domo-login.png)
+![Domo login Page](assets/domo-login.png)
 
 
 
@@ -50,7 +50,7 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 
 
-![Domo forgot password Page](../docs/assets/domo-forgot-password.png)
+![Domo forgot password Page](assets/domo-forgot-password.png)
 
 
 
@@ -66,7 +66,7 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 
 
-![Domo forgot password link](../docs/assets/domo-reset-password.png)
+![Domo forgot password link](assets/domo-reset-password.png)
 
 
 
@@ -81,7 +81,7 @@ This guide will help you log in to Domo for the first time and access the Populu
 
 
 
-![Domo Invitation Page](../docs/assets/domo-invitation.png)
+![Domo Invitation Page](assets/domo-invitation.png)
 
 
 - Click **Get Started** again  

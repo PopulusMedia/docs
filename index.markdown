@@ -21,7 +21,7 @@ Partners may also integrate by embedding an iframe, with opportunity-related par
 
 ## Parameters
 
-To see how paratermers are passed, please check out the sections on [HTML](html), [JavaScript](javascript) ,[Embedded](embed) and [Domo Dashboard](/domo-dashboard) for examples.  The following set of parameters can be passed 
+To see how paratermers are passed, please check out the sections on [HTML](html), [JavaScript](javascript) and [Embedded](embed) for examples.  The following set of parameters can be passed 
 
 | Parameter Name | Description | Required | Default |
 | ----- | -------- |----- | ----- |

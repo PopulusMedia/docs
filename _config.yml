@@ -37,6 +37,7 @@ header_pages:
   - embed.markdown
   - data.markdown
   - pixel.markdown
+  - dashboard.md
 
 #plugins:
 #  - jekyll-feed
