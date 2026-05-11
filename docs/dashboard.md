@@ -1,3 +1,10 @@
+---
+layout: page
+title: Domo Dashboard
+permalink: /domo-dashboard
+---
+
+
 # 📘 Domo Access Setup Guide (Populus Partner App)
 
 ## 🔹 Overview
