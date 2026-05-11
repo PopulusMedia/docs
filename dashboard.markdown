@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Domo Dashboard
+title: Dashboard
 permalink: /domo-dashboard
 ---
 
