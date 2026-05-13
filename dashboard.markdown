@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dashboard
-permalink: /domo-dashboard
+permalink: /dashboard
 ---
 
 
